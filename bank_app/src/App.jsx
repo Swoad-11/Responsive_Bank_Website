@@ -1,11 +1,37 @@
 import React from 'react';
+import styles from './style'
 
+import {
+  Navbar, Billing, CardDeal, Business, Clients, CTA, Stats, Footer, Testimonial, Hero,
+} from './components';
 
 const App = () => {
   return (
-    <div className='bg-black w-full'>
-      <h1 className='text-red-500'>Hello</h1>
-      <p className='bg-red-400'>ashasbhdsdfadfa</p>
+    <div className='bg-primary w-full overflow-hidden'>
+      <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+        <div className={`${styles.boxWidth}`}>
+          <Navbar></Navbar>
+        </div>
+      </div>
+
+      <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>
+        <div className={`${styles.boxWidth}`}>
+          <Hero></Hero>
+        </div>
+      </div>
+
+      <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>
+        <div className={`${styles.boxWidth}`}>
+          <Stats />
+          <Business />
+          <Billing />
+          <CardDeal />
+          <Testimonial />
+          <Clients />
+          <CTA />
+          <Footer />
+        </div>
+      </div>
     </div>
   );
 };
